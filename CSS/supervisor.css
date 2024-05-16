@@ -1,0 +1,66 @@
+.bd {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.nb {
+    background-color: red;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    color:pink;
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* Optional: Add some spacing between the menu and the content */
+.content {
+    padding: 20px;
+}
+
+/* Optional: Style for the links inside the content area */
+.content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+a span {
+    font-weight: bold;
+}
+
+/* Optional: Add some spacing between the menu and the content */
+.content {
+    padding: 20px;
+}
+
+/* Optional: Style for the links inside the content area */
+.content a {
+    color: #333;
+    text-decoration: underline;
+}
