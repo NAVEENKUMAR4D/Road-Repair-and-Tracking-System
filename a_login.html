@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clerk_Login</title>
+    <link rel="stylesheet" href="userlogin.css">
+</head>
+
+<body>
+    <form name="form" action="a_verify.jsp" method="post">
+        <div class="container">
+            <div class="brand-logo"><div class="brand-logo"><img src="admin.png" width="70" height="80"></div></div>
+            <div class="brand-title">ADMINISTRATOR Login </div>
+            <div class="inputs">
+                <label for="username">ADMIN_ID</label>
+                <input class="input-field" type="text" id="username" name="uname" placeholder="Enter clerk_id" />
+                <p class="error-message" id="usernameError"></p>
+
+                <label for="password">PASSWORD</label>
+                <input class="input-field" type="password" id="password" name="pwds"
+                    placeholder="Min 6 charaters long" />
+                <p class="error-message" id="passwordError"></p>
+
+                <button class="login-button" type="submit" id="myButton" >LOGIN</button>
+            </div>
+        </div>>
+    </form>
+</body>
+
+</html>

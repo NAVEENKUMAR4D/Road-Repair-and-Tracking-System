@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #dc3545;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            border-bottom: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dc3545;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #c82333;
+        }
+
+        .error-message {
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .remove-button {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 20px; /* Adjusted width */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .remove-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <title>Remove Clerk</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Remove Clerk</div>
+            <div class="card-body">
+                <form name="form" action="removeClerk.jsp" method="post">
+                    <label for="username">Clerk name:</label>
+                    <input class="input-field" type="text" id="username" name="username" placeholder="Enter clerk name" required>
+                    <p class="error-message" id="usernameError"></p>
+
+                    <label for="clerkID">Clerk ID:</label>
+                    <input class="input-field" type="text" id="clerkID" name="clerkID" placeholder="Enter Clerk ID" required>
+                    <p class="error-message" id="clerkIDError"></p>
+
+                    <button class="remove-button" type="submit" id="myButton">Remove</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

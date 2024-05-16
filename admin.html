@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #logo {
+            margin-left: 20px;
+        }
+
+        #search {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        #search input {
+            padding: 5px;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            margin-right: 5px;
+        }
+
+        #menu {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            padding: 20px;
+            border-right: 2px solid #ddd;
+            height: calc(100vh - 40px);
+            background-color: #0a0a0a;
+        }
+        #menu a{
+            text-decoration: none;
+      color: whitesmoke;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #e79a9a;
+      border-radius: 5px;
+      text-align: center;
+      text-shadow: 3px 3px 3px powderblue;
+        }
+
+        #content {
+            width: 80%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+           
+        }
+
+        .login-page {
+            width: 100%;
+            text-align: center;
+        }
+        label {
+      font-size: 14px;
+      color: #030303;
+      margin-bottom: 5px;
+      display: block;
+      font-weight: 500px;
+    }
+
+    input {
+      width: 300px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      line-height: 0.1;
+    }
+
+    button{
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 0.4;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+        .complaint-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .complaint-box button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .complaint-box button.rejected {
+            background-color: #f44336;
+        }
+	.login-container {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .submit-btn {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .submit-btn:hover {
+      background-color: #2980b9;
+    }
+    </style>
+</head>
+<body style="background:linear-gradient(to right, #00ff00, #ffff00);">
+    <div id="header">
+        <div id="logo">
+            <img src="your-logo.png" alt="Logo" width="50">
+        </div>
+        <div id="search">
+            <input type="text" placeholder="Search">
+            <span>&#128269;</span> <!-- Search icon, you can replace it with an actual icon library -->
+        </div>
+    </div>
+
+    <div id="menu">
+        <a href="#" onclick="showContent('login')">Admin Login</a>
+        <a href="#" onclick="showContent('complaints')">Complaints-Estimation</a>
+        <a href="#" onclick="showContent('approved')">Approved</a>
+        <a href="#" onclick="showContent('rejected')">Rejected</a>
+    </div>
+
+    <div class="login-container">
+    <h2>Login</h2>
+    <form class="login-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Login</button>
+    </form>
+  </div>
+
+    <script>
+        function showContent(section) {
+            // This is a placeholder function, you need to implement logic to show/hide content based on user interactions
+            const contentSections = ['loginContent', 'complaintsContent', 'approvedContent', 'rejectedContent'];
+
+            contentSections.forEach(sectionId => {
+                const sectionElement = document.getElementById(sectionId);
+                if (sectionId === `${section}Content`) {
+                    sectionElement.style.display = 'block';
+                } else {
+                    sectionElement.style.display = 'none';
+                }
+            });
+        }
+
+        function authenticate() {
+            // Placeholder authentication logic (replace with actual backend authentication)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Example: Only for demonstration, replace with actual authentication logic
+            if (username === 'admin' && password === 'password') {
+                showContent('complaints');
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+
+        // Example function for adding a complaint to the approved or rejected list
+        function handleComplaintAction(isApproved) {
+            alert(isApproved ? 'Complaint Approved!' : 'Complaint Rejected!');
+        }
+    </script>
+</body>
+</html>

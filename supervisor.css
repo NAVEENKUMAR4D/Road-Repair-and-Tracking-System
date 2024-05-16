@@ -1,0 +1,117 @@
+.bd {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.nb {
+    background-color:white;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* Optional: Add some spacing between the menu and the content */
+.content {
+    padding: 20px;
+}
+
+/* Optional: Style for the links inside the content area */
+.content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+a span {
+    font-weight: bold;
+}
+
+/* Optional: Add some spacing between the menu and the content */
+.content {
+    padding: 20px;
+}
+
+/* Optional: Style for the links inside the content area */
+.content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* input[type="text"] */
+ .inp1{
+  width: 200px; /* Set the width of the input field */
+  padding: 10px; /* Padding around the text */
+  margin: 5px 0; /* Add some margin for spacing */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+/*input[type="text"]*/
+.inp:focus {
+  border-color: #4CAF50; /* Change border color on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+/*input[type="button"]*/
+.b1{
+  background-color: #4CAF50; /* Green background color */
+  color: black; /* White text color */
+  padding: 10px 20px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.body1 {
+  font-family: 'Arial', sans-serif; /* Set the default font for the body */
+  line-height: 1.6; /* Set the line height for better readability */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f4f4f4; /* Set a background color for the body */
+  color: #333; /* Set the default text color */
+}
+
+/* Add some spacing around the content */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style links */
+a {
+  color: #007BFF; /* Set link color */
+  text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

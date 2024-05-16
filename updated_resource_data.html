@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator - Manpower and Machine Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            border: none;
+        }
+
+        input {
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="manpowerMachineForm" action="updated_resource_data.jsp" method="post">
+            <h3>Manpower and Machine Management</h3>
+
+            <fieldset>
+                <label for="manpower">Available Manpower:</label>
+                <input type="text" class="form-control" id="manpower" name="manpower" required>
+            </fieldset>
+
+            <fieldset>
+                <label for="machines">Available Machines:</label>
+                <input type="text" class="form-control" id="machines" name="machines" required>
+            </fieldset>
+
+            <fieldset>
+                <label for="committedManpower">Committed Manpower:</label>
+                <input type="text" class="form-control" id="committedManpower" name="committedManpower" required>
+            </fieldset>
+
+            <fieldset>
+                <label for="committedMachines">Committed Machines:</label>
+                <input type="text" class="form-control" id="committedMachines" name="committedMachines" required>
+            </fieldset>
+
+            <fieldset>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

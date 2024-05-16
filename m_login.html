@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAYOR_Login</title>
+    <link rel="stylesheet" href="userlogin.css">
+</head>
+
+<body>
+    <form name="form" action="m_verify.jsp" method="post">
+        <div class="container">
+            <div class="brand-logo"><img src="mayor.png" width="90" height="90"><</div>
+            <div class="brand-title">MAYOR Login </div>
+            <div class="inputs">
+                <label for="username">MAYOR_ID</label>
+                <input class="input-field" type="text" id="username" name="uname" placeholder="Enter MAYOR_id" />
+                <p class="error-message" id="usernameError"></p>
+
+                <label for="password">PASSWORD</label>
+                <input class="input-field" type="password" id="password" name="pwds"
+                    placeholder="Min 3 charaters long" />
+                <p class="error-message" id="passwordError"></p>
+
+                <button class="login-button" type="submit" id="myButton" >LOGIN</button>
+            </div>
+    </form>
+</body>
+
+</html>
